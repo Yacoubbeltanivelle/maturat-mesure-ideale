@@ -1,0 +1,61 @@
+/* Intitulés lisibles et destinations explicites. */
+.section-label { display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 1.4; font-weight: 600; letter-spacing: .01em; color: #315a76; }
+.section-label svg { width: 24px; height: 24px; flex-shrink: 0; }
+.expertise-tableau .section-label { color: #fff; }
+.featured-tableau > .section-label { position: absolute; z-index: 1; top: 28px; left: 36px; }
+.suppliers-intro-copy { flex-direction: column; gap: 24px; }
+.suppliers-intro-copy .text-button { display: inline-flex; line-height: 1.5; font-size: 14px; }
+#footer .footer-contact-cta { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 60px; padding-block: 22px; }
+.footer-cta-content { max-width: 510px; }
+.footer-cta-content p { font-size: 16px; line-height: 1.8; color: #3e5565; margin-bottom: 26px; }
+:is([data-page=home], [data-page=products]) #footer .footer-cta-content p { max-width: 430px; }
+.footer-cta-content .text-button { background: #244e6c; color: #fff; border: 0; border-radius: 8px; padding: 16px 22px; font-size: 15px; }
+.footer-cta-content .text-button:hover { background: #173c58; }
+.footer-cta-content small { display: block; font-size: 12px; line-height: 1.6; color: #526574; margin-top: 14px; }
+@media(max-width:650px) {
+ .section-label { font-size: 14px; }
+ .featured-tableau > .section-label { top: 22px; left: 24px; }
+ .featured-tableau .featured-stage { padding-top: 72px; }
+ #footer .footer-contact-cta { grid-template-columns: 1fr; gap: 24px; padding-block: 0; }
+ .footer-cta-content p { font-size: 15px; }
+}
+
+/* Papier ivoire et surfaces bleutées, avec des courbes de mesure discrètes. */
+body[data-pack=E][data-page=home] {
+  background: radial-gradient(ellipse at 0 35%, #eaf0f2 0, transparent 50%), linear-gradient(135deg, #faf9f6 0%, #f5f3ee 48%, #eeece6 100%);
+}
+[data-page=home] :is(.featured-tableau.section, .sectors-tableau.section, .expertise-tableau .expertise-steps) {
+  background: repeating-radial-gradient(circle at 105% -15%, transparent 0 27px, #638dab0c 28px 29px, transparent 30px 54px), radial-gradient(ellipse at 100% 100%, #d4e5f1, transparent 70%), #f1f3f5;
+}
+[data-page=home] .family-editorial {
+  border-radius: var(--home-frame-radius);
+  background: radial-gradient(ellipse at 100% 0, #d4e5f177, transparent 65%), linear-gradient(125deg, #f8f9fa99, #eaf0f499);
+}
+[data-page=home] .family-editorial-header {
+  background: repeating-radial-gradient(circle at 100% 0, transparent 0 27px, #638dab0b 28px 29px, transparent 30px 54px);
+}
+:is([data-page=home], [data-page=products])[data-pack=E] #footer { background: transparent; }
+:is([data-page=home], [data-page=products]) #footer .footer-contact-cta {
+  width: 88.8%; max-width: 1320px; box-sizing: border-box;
+  align-items: start; padding: 80px 0 88px; border-radius: 0;
+  background: transparent;
+  border-block: 1px solid #315a7626;
+}
+:is([data-page=home], [data-page=products]) #footer .footer-contact-cta h2 { margin: 0; }
+@media(max-width:650px) {
+  :is([data-page=home], [data-page=products]) #footer .footer-contact-cta { width: calc(100% - 32px); padding: 48px 0 56px; gap: 32px; }
+}
+
+/* Des motifs propres à chaque sujet, dans une même palette. */
+[data-page=home] .family-editorial-header {
+  background: repeating-linear-gradient(90deg, #567d950b 0 1px, transparent 1px 32px), linear-gradient(115deg,#f7f6f1,#e1edf4);
+}
+[data-page=home] .expertise-tableau .expertise-steps {
+  background: radial-gradient(circle,#52738e20 1px,transparent 1.5px) 0 0 / 24px 24px, linear-gradient(135deg,#f5f3ee,#dfe9ef);
+}
+[data-page=home] .featured-tableau.section {
+  background: repeating-linear-gradient(0deg,#567d9509 0 1px,transparent 1px 40px), repeating-linear-gradient(90deg,#567d9509 0 1px,transparent 1px 40px), linear-gradient(125deg,#eef4f8,#faf6ec);
+}
+[data-page=home] .sectors-tableau.section {
+  background: repeating-linear-gradient(135deg,transparent 0 65px,#557a920a 66px 67px,transparent 68px 130px), radial-gradient(ellipse at 0 100%,#ccdfe9,transparent 70%),#f2f4f3;
+}

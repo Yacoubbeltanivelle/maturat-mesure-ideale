@@ -1,0 +1,113 @@
+/* Dropout uniquement : aucune règle ne déborde sur les autres pages. */
+.dropout-page{--drop-blue:#287cb5;--drop-ink:#182b3b;--drop-rule:#b9ccd9;--display:'Instrument Sans',sans-serif;--body:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;color:var(--drop-ink);background:#f7f9fa}
+.dropout-page .mono,.dropout-page .eyebrow{font-size:13px}
+.dropout-page .drop-intro{padding:28px 5.6% 54px;background:radial-gradient(ellipse at 85% 45%,#d8e8f3 0,transparent 52%),#f7f9fa}
+.dropout-page .drop-intro-grid{grid-template-columns:1.15fr 1fr;gap:4%;align-items:center}
+.dropout-page .drop-intro h1{font:500 clamp(86px,9.6vw,146px)/.95 var(--display);letter-spacing:-.065em;margin:28px 0}
+.dropout-page .drop-period{color:var(--drop-blue)}
+[data-pack=E] .dropout-page .drop-intro h2{font-size:clamp(28px,2.8vw,40px);line-height:1.16}
+.dropout-page .drop-hero-copy>p{max-width:440px;margin-top:26px;font-size:16px;line-height:1.8;color:#516577}
+.dropout-page .intro-actions{margin-top:30px;gap:15px}
+.dropout-page .primary{background:#216c9f;color:#fff;border-radius:3px}
+.dropout-page .primary:hover{background:#184f76}
+.dropout-page .drop-hero-object{position:relative;isolation:isolate;margin:0;min-width:0;height:590px;display:flex;align-items:center;justify-content:center;background:linear-gradient(#86abc019 1px,transparent 1px),linear-gradient(90deg,#86abc019 1px,transparent 1px);background-size:64px 64px;border-top:1px solid var(--drop-rule);border-bottom:1px solid var(--drop-rule)}
+.dropout-page .drop-object-index{position:absolute;top:18px;left:18px;color:#526a7e}
+.dropout-page .drop-object-orbit{position:absolute;width:86%;aspect-ratio:1;border:1px solid #89b3ce50;border-radius:50%;z-index:-1;background:radial-gradient(circle,#fff9,transparent 68%)}
+.dropout-page .drop-hero-image{height:480px;width:90%;object-fit:contain;filter:drop-shadow(9px 15px 13px #17374b20)}
+.dropout-page figcaption{position:absolute;bottom:16px;left:18px;right:18px;display:flex;flex-direction:column;gap:4px;font-size:12px;color:#526a7e}
+.dropout-page .drop-section{padding:80px 5.6%}
+.dropout-page .drop-section-heading h2{font-size:clamp(32px,3.1vw,46px);margin-top:23px;line-height:1.12}
+.dropout-page .drop-problem{background:#eaf1f6;border-top:1px solid #d7e3eb;padding-bottom:32px}
+.dropout-page .drop-problem-flow{display:flex;align-items:center;gap:40px;margin:48px 0 42px;font:14px/1.5 var(--mono)}
+.dropout-page .drop-flux-source strong{font-weight:500;font-size:20px}
+.dropout-page .drop-flux-source>div{display:flex;gap:22px;margin-top:13px;color:#536c7e;font-size:13px}
+.dropout-page .drop-flux-line{flex:1;display:flex;align-items:center;color:var(--drop-blue);font-size:30px}
+.dropout-page .drop-flux-line:before{content:'';height:1px;background:var(--drop-blue);flex:1;margin-right:-4px}
+.dropout-page .drop-flux-target{padding-left:26px;border-left:2px solid #7898b0;line-height:1.7}
+.dropout-page .drop-transition{display:flex;justify-content:space-between;border-top:1px solid var(--drop-rule);padding-top:22px;font-size:14px;color:#4e677b}
+[data-pack=E] .dropout-page .drop-experience{padding:0;background:#111e2b;color:#f4f7fa;scroll-margin-top:0}
+.dropout-page .drop-workspace{grid-template-columns:1.15fr 1fr;gap:6%;padding:36px 5.6%}
+.dropout-page .drop-stage-shell{min-width:0;border-right:1px solid #52687a60;padding-right:7%}
+.dropout-page .product-stage{min-height:570px}
+.dropout-page .stage-id{align-self:stretch;border-bottom:1px solid #52687a60;padding:0 0 16px;margin-bottom:14px}
+.dropout-page .product-frame{height:430px;max-width:510px}
+.dropout-page .product-frame>.drop-whole{padding:0;filter:drop-shadow(8px 12px 12px #0003)}
+[data-pack=E] .dropout-page .stage-ambient{background:radial-gradient(ellipse at 50% 45%,#3f8eb533,transparent 65%)}
+.dropout-page .drop-copy{margin:28px 0;min-height:218px}
+[data-pack=E] .dropout-page .drop-copy h2{font-size:clamp(34px,3.1vw,46px);line-height:1.12;margin:16px 0 20px}
+.dropout-page .drop-copy p{font-size:16px;line-height:1.8;max-width:450px}
+.dropout-page .stage-tabs{grid-template-columns:1fr;gap:0}
+[data-pack=E] .dropout-page .stage-tabs button{border:0;border-top:1px solid #52687a80;border-radius:0;padding:12px 0;min-height:47px;background:transparent;color:#aebfcf;font:14px var(--display);text-transform:uppercase;letter-spacing:.07em}
+[data-pack=E] .dropout-page .stage-tabs button[aria-pressed=true]{color:#fff;background:linear-gradient(90deg,#4395d11b,transparent);border-color:#7298b5}
+.dropout-page .stage-tabs button[aria-pressed=true]{box-shadow:inset 3px 0 #79b5dc;padding-left:12px}
+.dropout-page .stage-tabs .mono{width:30px;color:#79b5dc}
+[data-pack=E] .dropout-page .view-switch{border:0;border-radius:0;background:none;margin:16px 0;gap:20px;align-items:center}
+.dropout-page .view-switch:before{content:'VUE';font:12px var(--mono);color:#aabbca}
+[data-pack=E] .dropout-page .view-switch button{border-radius:0;padding:10px 0;background:none;border-bottom:1px solid transparent;font-size:13px}
+[data-pack=E] .dropout-page .view-switch button[aria-pressed=true]{background:none;color:white;border-bottom-color:#79b5dc}
+.dropout-page .image-source{max-width:360px;line-height:1.5;font-size:12px}
+.dropout-page .sync-button{font-size:13px;min-height:44px}
+.dropout-page .drop-editorial .small-note{font-size:13px;margin-top:10px}
+.dropout-page .flow-diagram{border-radius:0;background-color:#edf4f9}
+.dropout-page .flow-node{border-radius:2px}
+.dropout-page .flow-note{font-size:13px}
+.dropout-page .drop-protection{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center;background:#f7f9fa}
+.dropout-page .drop-protection-list{list-style:none;margin:0;padding:0}
+.dropout-page .drop-protection-list li{display:flex;align-items:center;gap:32px;padding:25px 0;border-bottom:1px solid var(--drop-rule)}
+.dropout-page .drop-protection-list li:first-child{border-top:1px solid var(--drop-rule)}
+.dropout-page .drop-protection-list span{font:13px var(--mono);color:var(--drop-blue)}
+.dropout-page .drop-protection-list h3{font-size:23px;letter-spacing:-.025em}
+.dropout-page .application-cta{background:#eaf1f6;gap:8%;border-top:1px solid #d7e3eb}
+[data-pack=E] .dropout-page .application-cta h2{font-size:clamp(32px,3.1vw,46px);margin:23px 0}
+.dropout-page .application-cta p{font-size:16px;color:#516577}
+.dropout-page .application-cta .small-note{font-size:13px;line-height:1.7}
+.dropout-page .application-cta .text-button{display:flex;width:fit-content;margin-top:12px}
+.dropout-page .drop-application-data{display:grid;grid-template-columns:1fr 1fr;list-style:none;padding:0;margin:0 0 25px;gap:0 24px}
+.dropout-page .drop-application-data li{border-bottom:1px solid var(--drop-rule);padding:17px 0;font:13px/1.6 var(--mono);text-transform:uppercase}
+.dropout-page :is(button,a):focus-visible{outline:3px solid #e69233;outline-offset:4px}
+@media(max-width:800px){
+ .dropout-page .drop-intro-grid{grid-template-columns:1fr;gap:36px}
+ .dropout-page .drop-intro{padding:24px 6% 40px}
+ .dropout-page .drop-intro h1{font-size:clamp(78px,17vw,110px)}
+ .dropout-page .drop-hero-object{height:465px}
+ .dropout-page .drop-hero-image{height:360px}
+ .dropout-page .drop-section{padding:52px 6%}
+ .dropout-page .drop-problem-flow{gap:20px;flex-wrap:wrap;margin:32px 0}
+ .dropout-page .drop-flux-source{width:100%}
+ .dropout-page .drop-flux-line{min-width:40px}
+ .dropout-page .drop-flux-target{font-size:13px}
+ .dropout-page .cinematic{height:auto;min-height:0}
+ .dropout-page .cinematic .drop-sticky{position:static;height:auto;min-height:0}
+ .dropout-page .drop-workspace{grid-template-columns:1fr;gap:26px;padding:32px 6% 44px}
+ .dropout-page .drop-stage-shell{padding:0;border-right:0}
+ .dropout-page .product-stage{min-height:0}
+ .dropout-page .product-frame{height:350px}
+ .dropout-page .drop-editorial{padding:0}
+ .dropout-page .drop-copy{min-height:0;margin:24px 0}
+ .dropout-page .stage-tabs{grid-template-columns:1fr 1fr;column-gap:16px}
+ [data-pack=E] .dropout-page .stage-tabs button{font-size:12px;gap:7px;letter-spacing:0}
+ .dropout-page .stage-tabs .mono{width:auto}
+ .dropout-page .stage-tabs button[aria-pressed=true]:after{content:none}
+ .dropout-page .sync-button,.dropout-page .scroll-track{display:none}
+ .dropout-page .drop-protection,.dropout-page .application-cta{grid-template-columns:1fr;gap:30px}
+ .dropout-page .drop-protection-list h3{font-size:21px}
+ .dropout-page .drop-protection-list li{gap:20px;padding:20px 0}
+ .dropout-page .drop-application-data{gap:0 18px}
+ .dropout-page .view-switch{gap:16px}
+ .dropout-page figcaption .mono{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce),(max-height:780px) and (min-width:801px){
+ .dropout-page .cinematic{height:auto;min-height:0}
+ .dropout-page .cinematic .drop-sticky{position:static;height:auto;min-height:0}
+ .dropout-page .sync-button,.dropout-page .scroll-track{display:none}
+}
+
+/* Réserve de scroll desktop : quatre étapes sur une séquence plus courte. */
+@media(min-width:801px) and (min-height:781px) and (prefers-reduced-motion:no-preference){
+ .dropout-page .cinematic{height:220vh;min-height:0}
+}
+
+/* Photo du réseau d'air comprimé (visuel 721) sous le schéma du flux, même traitement que la photo Dropout de l'accueil. */
+.drop-network-photo { margin: 48px 0 0; }
+.drop-network-photo .drop-network-img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; border-radius: 10px; }
+.drop-network-photo figcaption { margin-top: 8px; font-size: 11px; }

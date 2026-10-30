@@ -1,0 +1,469 @@
+/* ============================================================
+   Site header — desktop + compact + mobile dialog
+   Breakpoint 960px: switch from desktop nav to compact bar.
+   All new selectors use the sh- prefix to avoid collisions.
+   ============================================================ */
+
+/* Base stacking: without this the header has z-index:auto and later
+   isolated siblings under #main (hero sections, .drop-feature, etc.)
+   paint over the Produits dropdown / mobile dialog in DOM order. */
+.site-header {
+  z-index: 50;
+}
+
+/* Logo: fixed width, never compressed */
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  width: 152px;
+  min-height: 44px;
+  flex: 0 0 152px;
+}
+
+/* The active page reads by colour and by a rule under the label: colour alone is not
+   enough. Action links keep their filled background and no underline. */
+.site-header .sh-nav > a[aria-current="page"] {
+  text-decoration: none;
+}
+
+.site-header .sh-nav > a[aria-current="page"]:not(.nav-action),
+.site-header .sh-products-btn[aria-current="page"],
+.site-header .sh-products-btn.sh-is-active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+/* ── Desktop nav ──────────────────────────────────────────── */
+
+.site-header .sh-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.sh-nav > a,
+.sh-products-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 12px;
+  min-height: 44px;
+  border-radius: 5px;
+  color: var(--ink);
+  text-decoration: none;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.sh-nav > a:hover,
+.sh-products-btn:hover {
+  background: var(--surface);
+}
+
+/* Active link colour (not the CTA which has its own background) */
+.sh-nav > a[aria-current="page"]:not(.sh-cta),
+.sh-products-btn[aria-current="page"],
+.sh-products-btn.sh-is-active {
+  color: var(--accent);
+}
+
+/* Chevron rotates when panel is open */
+.sh-chevron {
+  font-size: 11px;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+.sh-products-btn[aria-expanded="true"] .sh-chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Products panel (desktop) ────────────────────────────── */
+
+.sh-products-wrap {
+  position: relative;
+}
+
+.sh-products-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: -8px;
+  min-width: 210px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 6px;
+  z-index: 200;
+  box-shadow: 0 6px 20px rgba(20, 28, 37, 0.08), 0 1px 3px rgba(20, 28, 37, 0.04);
+}
+
+.sh-panel-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sh-panel-list a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: background 0.1s;
+}
+
+.sh-panel-list a:hover {
+  background: var(--surface);
+}
+
+/* "Tout le catalogue" is bold + separated from families */
+.sh-panel-catalog {
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2px;
+  padding-bottom: 10px !important;
+}
+
+/* ── Desktop CTA ─────────────────────────────────────────── */
+
+.sh-cta.nav-action {
+  display: inline-flex;
+  align-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 99px;
+  padding: 10px 18px !important;
+  font-weight: 600;
+  margin-left: 4px;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.sh-cta.nav-action:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+/* ── Focus styles for new elements ───────────────────────── */
+
+.sh-nav > a:focus-visible,
+.sh-products-btn:focus-visible,
+.sh-menu-btn:focus-visible,
+.sh-cta-mini:focus-visible,
+.sh-dialog-close:focus-visible,
+.sh-mob-link:focus-visible,
+.sh-mob-summary:focus-visible,
+.sh-mob-sub-link:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ── Compact controls (hidden on desktop) ────────────────── */
+
+.site-header .sh-compact {
+  display: none;
+  align-items: center;
+  gap: 6px;
+}
+
+.sh-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.sh-menu-btn:hover {
+  background: var(--line);
+}
+
+.sh-cta-mini.nav-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px !important;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  text-decoration: none;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 99px;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.sh-cta-mini.nav-action:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+/* ── Layout breakpoint: switch to compact below 960px ───── */
+
+@media (max-width: 959px) {
+  /* Let height be content-driven on compact, not the base 108px */
+  .site-header {
+    height: auto;
+    min-height: 0;
+    padding-block: 10px;
+  }
+
+  .site-header .brand {
+    width: 128px;
+    flex-basis: 128px;
+  }
+
+  .site-header .sh-nav {
+    display: none;
+  }
+
+  .site-header .sh-compact {
+    display: flex;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header .brand {
+    width: 108px;
+    flex-basis: 108px;
+  }
+
+  .site-header .sh-compact {
+    gap: 4px;
+  }
+
+  .sh-menu-btn,
+  .sh-cta-mini.nav-action {
+    padding-inline: 10px !important;
+    font-size: 13px;
+  }
+}
+
+/* ── Mobile dialog ───────────────────────────────────────── */
+
+.sh-mobile-dialog {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: min(340px, 88vw);
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.sh-mobile-dialog::backdrop {
+  background: rgba(20, 28, 37, 0.45);
+}
+
+.sh-dialog-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* Top row: label left, close button right */
+.sh-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.sh-dialog-label {
+  font-family: var(--display);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.sh-close-icon {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.sh-dialog-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 6px 10px;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.sh-dialog-close:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.site-header .sh-mobile-dialog .sh-dialog-inner > nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 6px 0;
+}
+
+/* Mobile nav links — full-width rows, hairline separators */
+.sh-mob-link {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  /* left 19px = 22px inset minus 3px reserved for accent border */
+  padding: 10px 22px 10px 19px;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.1s;
+}
+
+.sh-mob-link:last-child {
+  border-bottom: none;
+}
+
+.sh-mob-link:hover {
+  background: var(--surface);
+}
+
+/* Active: small blue left accent, no colored block */
+.sh-mob-link[aria-current="page"] {
+  border-left-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Produits disclosure — same row height, hairline below */
+.sh-mob-products {
+  border-bottom: 1px solid var(--line);
+}
+
+.sh-mob-summary {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 10px 22px 10px 19px;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.1s;
+}
+
+.sh-mob-summary::-webkit-details-marker { display: none; }
+
+.sh-mob-summary::after {
+  content: '▾';
+  margin-left: auto;
+  font-size: 11px;
+  transition: transform 0.15s;
+}
+
+.sh-mob-products[open] > .sh-mob-summary::after {
+  transform: rotate(180deg);
+}
+
+.sh-mob-summary:hover {
+  background: var(--surface);
+}
+
+/* Active Produits section: blue left accent on the summary */
+.sh-mob-products.sh-is-active > .sh-mob-summary {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+/* Sub-links: thin left rule, indented from panel edge */
+.sh-mob-sub {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 8px 41px;
+  padding: 2px 0;
+  border-left: 1px solid var(--line);
+}
+
+.sh-mob-sub-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.1s;
+}
+
+/* Catalogue link: bolder than family links */
+.sh-mob-sub-link:first-child {
+  font-weight: 600;
+}
+
+.sh-mob-sub-link:hover {
+  background: var(--surface);
+}
+
+.sh-panel-list a[aria-current="page"],
+.sh-mob-sub-link[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}

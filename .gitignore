@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+.claude/launch.json
+.claude/worktrees/
+# Sorties d'outillage local (Playwright, captures de verification) : jamais publiees.
+output/
+.playwright-cli/
+_captures/
+# Graphe et caches Graphify : generes localement avec graphify update .
+graphify-out/
+# Critiques et audits internes : jamais publiés.
+critique/
+PERSONAS-CRITIQUE.md
+C2-RAPPORT.md

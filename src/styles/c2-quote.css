@@ -1,0 +1,136 @@
+/* Mission C2 : choix « référence » ou « besoin », confidentialité, confirmation. */
+
+/* Les champs propres à un mode n'apparaissent que si ce mode est coché. */
+.form-card:has(input[name="mode"][value="need"]:checked) .mode-reference,
+.form-card:has(input[name="mode"][value="reference"]:checked) .mode-need {
+  display: none;
+}
+
+.quote-mode {
+  margin: 0 0 22px;
+  padding: 0;
+  border: 0;
+}
+
+.quote-mode .radio-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mode-reference p.small-note {
+  margin: 8px 0 18px;
+}
+
+.quote-privacy {
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--line, #d9e3e9);
+  border-radius: 10px;
+  background: #f4f7f9;
+}
+
+.quote-privacy p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quote-privacy a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.form-success .request-id-line {
+  margin: 14px 0 6px;
+  font-size: 17px;
+}
+
+.form-success .request-id {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--line, #d9e3e9);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+.form-success .request-recap {
+  margin: 22px 0 6px;
+  text-align: left;
+}
+
+.form-success .form-actions {
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+/* Douze familles : deux colonnes plutôt qu'une pile de douze lignes. */
+[data-page=quote] .family-radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+[data-page=quote] .family-radio {
+  border-right: 1px solid var(--line);
+}
+
+[data-page=quote] .family-radio:nth-child(2n) {
+  border-right: 0;
+}
+
+/* Étape déjà remplie : un bouton couvre toute la ligne pour la rouvrir. */
+.form-progress li.revisit {
+  position: relative;
+}
+
+.form-progress li.revisit:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.form-progress .step-link {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.form-progress .step-link:focus-visible {
+  outline: 3px solid #236ea5;
+  outline-offset: 2px;
+}
+
+/* Erreur de saisie : message sous le champ et contour rouge, à la place de la bulle du navigateur. */
+.form-card .field-error {
+  margin: 8px 0 0;
+  color: #a12a1f;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.form-card [aria-invalid="true"] {
+  border-color: #a12a1f !important;
+  box-shadow: 0 0 0 1px #a12a1f;
+}
+
+/* style.css donne à tout label 24 px de marge au-dessus et 9 px au-dessous, et 20 px de marge
+   interne en haut de tout fieldset : dans une grille de choix, elles creusaient des bandes vides. */
+.form-card .radio-options .radio-choice,
+.form-card .family-radio-group .family-radio {
+  margin: 0;
+}
+
+.form-card .family-radio-group {
+  padding: 0;
+}
+
+/* Dernière ligne : le cadre porte déjà le trait du bas, la case de gauche ne le double pas. */
+.form-card .family-radio:nth-child(odd):nth-last-child(2) {
+  border-bottom: 0;
+}

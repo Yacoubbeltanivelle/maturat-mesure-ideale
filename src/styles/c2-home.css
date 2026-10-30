@@ -1,0 +1,367 @@
+/* Mission C2 : recherche par référence, index des ensembles, proximité, marques. */
+
+/* ── Recherche dans la hero ───────────────────────────────────────── */
+.hero-ref-search {
+  position: relative;
+  margin: 0 auto 18px;
+  max-width: 520px;
+  text-align: left;
+}
+
+.hero-ref-search label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #17364f;
+}
+
+.hero-ref-search input[type="search"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px 0 44px;
+  border: 1px solid #9fb6c6;
+  border-radius: 8px;
+  background: #fff;
+  color: #17364f;
+  font: inherit;
+  font-size: 16px;
+}
+
+.hero-ref-search input[type="search"]::placeholder {
+  color: #546f7a;
+}
+
+.hero-ref-search input[type="search"]:focus-visible {
+  outline: 3px solid #236ea5;
+  outline-offset: 2px;
+}
+
+.hero-ref-results {
+  margin-top: 8px;
+}
+
+.hero-ref-results:empty {
+  display: none;
+}
+
+.hero-ref-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: #17364f;
+  box-shadow: 0 10px 30px #0a223a40;
+  overflow: hidden;
+}
+
+.hero-ref-results li + li {
+  border-top: 1px solid #e3ebf0;
+}
+
+.hero-ref-results a {
+  display: grid;
+  gap: 2px;
+  padding: 10px 16px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-ref-results a:hover,
+.hero-ref-results a:focus-visible {
+  background: #eef4f8;
+}
+
+.hero-ref-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hero-ref-meta {
+  font-size: 12px;
+  color: #546f7a;
+}
+
+.hero-ref-empty {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #fff;
+  color: #17364f;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px #0a223a40;
+}
+
+.hero-ref-empty a {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-ref-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin-top: 8px;
+}
+
+.hero-ref-field {
+  position: relative;
+}
+
+.hero-ref-field svg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  fill: none;
+  stroke: #546f7a;
+  stroke-width: 2;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.hero-ref-suggest {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #17364f;
+  font-size: 13px;
+}
+
+.hero-ref-suggest button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid #9fb6c6;
+  border-radius: 16px;
+  background: #fff;
+  color: #17364f;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hero-ref-suggest button:hover,
+.hero-ref-suggest button:focus-visible {
+  border-color: #17364f;
+}
+
+/* ── Index des six ensembles ──────────────────────────────────────── */
+.home-index {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.home-index-header h2 {
+  max-width: 760px;
+  margin: 18px 0 32px;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.home-index-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 48px;
+  border-top: 1px solid var(--line, #cddde3);
+}
+
+.home-index-list li {
+  border-bottom: 1px solid var(--line, #cddde3);
+}
+
+.home-index-list a {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 20px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-index-list a:hover .home-index-name,
+.home-index-list a:focus-visible .home-index-name {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.home-index-code {
+  font-size: 12px;
+  color: var(--muted, #546f7a);
+}
+
+.home-index-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.home-index-name {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.home-index-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted, #546f7a);
+}
+
+.home-index-count {
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--muted, #546f7a);
+}
+
+/* ── Dropout : visuel photographique ──────────────────────────────── */
+.feature-photo {
+  margin: 0;
+}
+
+.feature-photo .feature-dropout-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.feature-photo figcaption {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+/* ── Proximité ────────────────────────────────────────────────────── */
+.home-proximity {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 56px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.home-proximity-copy h2 {
+  margin: 18px 0 20px;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.home-proximity-copy p {
+  max-width: 520px;
+  margin: 0 0 22px;
+  line-height: 1.7;
+}
+
+.home-proximity-figure {
+  margin: 0;
+}
+
+.home-proximity-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.home-proximity-figure figcaption {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--muted, #546f7a);
+}
+
+/* ── Marques en texte ─────────────────────────────────────────────── */
+.home-brand-list {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 40px;
+  border-top: 1px solid var(--line, #cddde3);
+}
+
+.home-brand-list li {
+  display: grid;
+  gap: 6px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line, #cddde3);
+}
+
+.home-brand-name {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.home-brand-families {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted, #546f7a);
+}
+
+/* ── Pages internes ───────────────────────────────────────────────── */
+.about-place {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.about-place-copy p {
+  margin: 0 0 14px;
+  line-height: 1.7;
+}
+
+.about-place-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.about-place-figures figure {
+  margin: 0;
+}
+
+.about-place-figures img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-place-figures figcaption {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted, #546f7a);
+}
+
+.suppliers-block-note {
+  margin: 6px 0 10px;
+  font-size: 12px;
+  color: var(--muted, #546f7a);
+}
+
+.drop-problem .drop-limit {
+  max-width: 560px;
+  margin: 18px 0 0;
+  line-height: 1.7;
+}
+
+/* v2-global force « color: inherit » sur les span ; le libellé sur photo reste blanc. */
+#site .sector-photo-label { color: #fff !important; }

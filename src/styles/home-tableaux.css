@@ -1,0 +1,120 @@
+/* Tableaux éditoriaux : bande photographique, parcours continu, objet exposé. */
+:root { --home-frame-radius: 24px; --home-section-gap: 64px; }
+.expertise-tableau.section, .featured-tableau.section, .sectors-tableau.section {
+  width: calc(100% - 8%); max-width: 1320px; margin: 64px auto; padding: 0;
+}
+.expertise-tableau {
+  border-radius: 28px; overflow: hidden; background: #f4f6f7;
+  box-shadow: 0 22px 60px -35px #17374d55;
+}
+.expertise-tableau .expertise-header {
+  display: grid; grid-template-columns: 1fr; position: relative; margin: 0;
+  min-height: 370px; padding: 54px; isolation: isolate;
+}
+.expertise-tableau .expertise-photo { position: absolute; inset: 0; z-index: -1; }
+.expertise-tableau .expertise-photo::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg,#122736ed 0%,#122736ae 42%,#12273605 80%);
+}
+.expertise-tableau .expertise-photo img { height: 100%; border-radius: 0; object-position: 50% 45%; }
+.expertise-tableau .expertise-photo figcaption { position: absolute; z-index: 1; right: 22px; bottom: 16px; color: #fff; background: #142735ad; padding: 4px 8px; border-radius: 4px; }
+.expertise-tableau .expertise-introduction { padding: 0; max-width: 490px; color: #fff; }
+.expertise-tableau .eyebrow, [data-pack=E] .expertise-tableau h2, .expertise-tableau .expertise-introduction p { color: #fff; }
+[data-pack=E] .expertise-tableau h2 { font-size: clamp(32px,3.5vw,48px); margin-top: 28px; }
+.expertise-tableau .expertise-introduction p { font-size: 16px; line-height: 1.65; max-width: 300px; margin-top: 22px; }
+.expertise-tableau .expertise-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; padding: 46px 42px 38px; background: radial-gradient(ellipse at 80% 140%,#c5d9e7aa,transparent 70%); }
+.expertise-tableau .expertise-step { display: flex; flex-direction: column; position: relative; padding: 0 26px; gap: 0; border: 0; }
+.expertise-tableau .expertise-step:last-child { border: 0; }
+.expertise-tableau .expertise-step:not(:last-child)::after { content: ''; position: absolute; height: 1px; background: #95aab9; top: 45px; left: 30px; width: 100%; }
+.expertise-tableau .expertise-index { position: relative; margin: 0 0 54px; padding: 0; color: #274b64; }
+.expertise-tableau .expertise-index::after { content: ''; position: absolute; left: 0; top: 40px; width: 11px; height: 11px; border: 1px solid #7394aa; border-radius: 50%; background: #f4f6f7; z-index: 1; box-shadow: 0 0 0 5px #e5edf2; }
+.expertise-tableau .expertise-step h3 { font-size: clamp(21px,2vw,28px); min-height: 2.5em; margin: 0 0 18px; }
+.expertise-tableau .expertise-detail { flex: 1; display: flex; flex-direction: column; }
+.expertise-tableau .expertise-detail > p { line-height: 1.7; font-size: 13px; }
+.expertise-tableau .expertise-action { margin-top: auto; padding-top: 25px; flex-wrap: wrap; gap: 20px; }
+.expertise-tableau .expertise-diagram { width: 115px; height: 40px; }
+.featured-tableau { position: relative; border-radius: 28px; background: #f2f5f7; border: 1px solid #e8edf0; overflow: hidden; }
+.featured-tableau > .eyebrow { position: absolute; z-index: 1; top: 32px; left: 38px; margin: 0; }
+.featured-tableau .featured-wrap { grid-template-columns: 1.1fr 1fr; gap: 0; align-items: stretch; }
+.featured-tableau .featured-stage {
+  border-radius: 0; padding: 82px 34px 30px; display: flex; flex-direction: column;
+  background: radial-gradient(ellipse at 50% 60%,#a5c3d76b,transparent 57%),linear-gradient(135deg,#f4f7f9,#dfeaf1);
+}
+.featured-tableau .featured-reference { align-self: flex-start; padding-bottom: 10px; border-bottom: 1px solid #8ba7ba; letter-spacing: .14em; }
+.featured-tableau .featured-instrument { flex: 1; min-height: 340px; }
+.featured-tableau .featured-content { padding: 84px 48px 42px; display: flex; flex-direction: column; justify-content: center; }
+.featured-tableau .featured-specs { border: 0; padding: 20px 0; margin: 0 0 18px; border-block: 1px solid #cfdae2; }
+.featured-tableau .featured-specs dd { font-size: 17px; line-height: 1.4; }
+.featured-tableau .featured-footer { margin-top: auto; padding-top: 22px; }
+.sectors-tableau { border-radius: 28px; padding: 42px !important; background: #f3f5f6; box-shadow: 0 22px 60px -35px #17374d45; }
+.sectors-tableau .sectors-header { margin-bottom: 32px; align-items: center; }
+.sectors-tableau .sectors-composition { grid-template-columns: repeat(12,minmax(0,1fr)); gap: 24px; }
+.sectors-tableau .sector-photo-major { grid-column: 1 / -1; grid-row: 1; }
+.sectors-tableau .sector-photo-major .sector-photo-frame { height: 350px; border-radius: 18px; }
+.sectors-tableau .sector-photo-major img { object-position: 50% 58%; }
+.sectors-tableau .sector-photo-major .sector-photo-label strong { font-size: clamp(36px,5vw,64px); font-weight: 400; }
+.sectors-tableau .sectors-index { grid-column: 1 / span 6; grid-row: 2 / span 2; padding: 20px 28px 0 0; }
+.sectors-tableau .sectors-index ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.sectors-tableau .sectors-index li { font-size: 14px; gap: 12px; padding-block: 17px; }
+.sectors-tableau .sector-photo-marine { grid-column: 7 / span 3; grid-row: 2; margin-top: 18px; }
+.sectors-tableau .sector-photo-lab { grid-column: 10 / span 3; grid-row: 2; margin-top: 18px; }
+.sectors-tableau .sector-photo-marine .sector-photo-frame, .sectors-tableau .sector-photo-lab .sector-photo-frame { height: 205px; border-radius: 16px; }
+.sectors-tableau .sector-photo-marine .sector-photo-label, .sectors-tableau .sector-photo-lab .sector-photo-label { left: 18px; bottom: 22px; }
+.sectors-tableau .sector-photo-marine strong, .sectors-tableau .sector-photo-lab strong { font-size: 27px; }
+.sectors-tableau .sectors-note { grid-column: 7 / -1; grid-row: 3; padding: 0; }
+.sectors-tableau .sectors-note > .mono { display: none; }
+.sectors-tableau .sectors-note p { margin: 0 0 15px; font-size: 23px; }
+.sectors-tableau .sectors-note p br { display: none; }
+.sectors-tableau .home-ecosystem { margin-top: 35px; }
+@media(max-width:1024px) {
+ .expertise-tableau .expertise-header { padding: 38px; }
+ .expertise-tableau .expertise-steps { padding: 38px 16px; }
+ .expertise-tableau .expertise-step { padding-inline: 18px; }
+ .expertise-tableau .expertise-step:not(:last-child)::after { left: 23px; }
+ .featured-tableau .featured-content { padding: 75px 28px 32px; }
+ .sectors-tableau { padding: 30px !important; }
+ .sectors-tableau .sectors-index { padding-right: 0; }
+ .sectors-tableau .sectors-index ul { grid-template-columns: 1fr; margin-top: 12px; }
+ .sectors-tableau .sectors-index li { padding-block: 9px; }
+ .sectors-tableau .sector-photo-marine { grid-column: 7 / -1; }
+ .sectors-tableau .sector-photo-lab { grid-column: 7 / -1; grid-row: 3; margin-top: 0; }
+ .sectors-tableau .sectors-note { grid-column: 1 / -1; grid-row: 4; }
+}
+@media(max-width:650px) {
+ .expertise-tableau.section, .featured-tableau.section, .sectors-tableau.section { width: calc(100% - 32px); margin-block: 40px; border-radius: 20px; }
+ .expertise-tableau .expertise-header { padding: 30px 24px 48px; min-height: 365px; }
+ .expertise-tableau .expertise-photo::after { background: linear-gradient(90deg,#122736e8,#12273668); }
+ .expertise-tableau .expertise-photo figcaption { font-size: 8px; right: 15px; bottom: 12px; }
+ .expertise-tableau .expertise-steps { grid-template-columns: 1fr; padding: 34px 24px; gap: 30px; }
+ .expertise-tableau .expertise-step { padding: 0 0 0 24px; border-left: 1px solid #b4c6d2; }
+ .expertise-tableau .expertise-step:last-child { border-left: 1px solid #b4c6d2; }
+ .expertise-tableau .expertise-step:not(:last-child)::after { display: none; }
+ .expertise-tableau .expertise-index { margin-bottom: 16px; }
+ .expertise-tableau .expertise-index::after { top: 3px; left: -30px; }
+ .expertise-tableau .expertise-step h3 { min-height: 0; font-size: 23px; }
+ .expertise-tableau .expertise-action { padding-top: 20px; }
+ .featured-tableau > .eyebrow { top: 25px; left: 24px; }
+ .featured-tableau .featured-wrap { grid-template-columns: 1fr; }
+ .featured-tableau .featured-stage { padding: 64px 24px 24px; }
+ .featured-tableau .featured-instrument { min-height: 245px; height: 245px; }
+ .featured-tableau .featured-instrument img { height: 240px; }
+ .featured-tableau .featured-content { padding: 30px 24px; }
+ .featured-tableau .featured-specs { gap: 14px; }
+ .featured-tableau .featured-specs dd { font-size: 15px; }
+ .sectors-tableau { padding: 24px 18px !important; }
+ .sectors-tableau .sectors-header { grid-template-columns: 1fr; }
+ .sectors-tableau .sectors-composition { grid-template-columns: 1fr 1fr; gap: 22px 12px; }
+ .sectors-tableau .sector-photo-major .sector-photo-frame { height: 280px; }
+ .sectors-tableau .sector-photo-major .sector-photo-label { left: 18px; }
+ .sectors-tableau .sector-photo-major .sector-photo-label strong { font-size: 34px; }
+ .sectors-tableau .sectors-index { grid-column: 1 / -1; grid-row: 2; padding: 0; }
+ .sectors-tableau .sectors-index ul { grid-template-columns: 1fr 1fr; gap: 0 12px; }
+ .sectors-tableau .sectors-index li { font-size: 11px; gap: 6px; }
+ .sectors-tableau .sector-photo-marine { grid-column: 1; grid-row: 3; margin: 0; }
+ .sectors-tableau .sector-photo-lab { grid-column: 2; grid-row: 3; margin: 0; }
+ .sectors-tableau .sector-photo-marine .sector-photo-frame, .sectors-tableau .sector-photo-lab .sector-photo-frame { height: 175px; border-radius: 12px; }
+ .sectors-tableau .sector-photo-marine .sector-photo-label, .sectors-tableau .sector-photo-lab .sector-photo-label { left: 10px; }
+ .sectors-tableau .sector-photo-marine strong, .sectors-tableau .sector-photo-lab strong { font-size: 20px; }
+ .sectors-tableau .sectors-note { grid-row: 4; }
+ .sectors-tableau .home-ecosystem { gap: 16px; }
+}

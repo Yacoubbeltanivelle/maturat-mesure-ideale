@@ -1,0 +1,137 @@
+83c0f44ad8f9.ttf
+Source Sans 3 Medium
+© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’
+
+http://scripts.sil.org/OFL
+
+90cb35eb6a6c.ttf
+Instrument Sans
+Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)
+
+https://scripts.sil.org/OFL
+
+02518739fec1.ttf
+Instrument Sans Medium
+Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)
+
+https://scripts.sil.org/OFL
+
+e50f4fc888eb.ttf
+Sora
+Copyright 2019 The Sora Project Authors (https://github.com/sora-xor/sora-font)
+
+https://scripts.sil.org/OFL
+
+d03f1389be8c.ttf
+Space Grotesk SemiBold
+Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
+
+https://scripts.sil.org/OFL
+
+87e867b52640.ttf
+Inter SemiBold
+Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+
+https://openfontlicense.org
+
+755fa076675e.ttf
+Manrope
+Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
+
+http://scripts.sil.org/OFL
+
+e6fa40b6715a.ttf
+Manrope Medium
+Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
+
+http://scripts.sil.org/OFL
+
+e45972c7e9f2.ttf
+Inter Medium
+Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+
+https://openfontlicense.org
+
+3d1d8e4bc9a0.ttf
+Source Sans 3
+© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’
+
+http://scripts.sil.org/OFL
+
+7e0a56187eca.ttf
+Instrument Serif
+Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+
+https://scripts.sil.org/OFL
+
+900670474e93.ttf
+Manrope SemiBold
+Copyright 2019 The Manrope Project Authors (https://github.com/sharanda/manrope)
+
+http://scripts.sil.org/OFL
+
+a9b9a4accfcc.ttf
+Source Sans 3 SemiBold
+© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’
+
+http://scripts.sil.org/OFL
+
+02e94dc48803.ttf
+Instrument Sans SemiBold
+Copyright 2022 The Instrument Sans Project Authors (https://github.com/Instrument/instrument-sans)
+
+https://scripts.sil.org/OFL
+
+289d2aa8e0ed.ttf
+Newsreader
+Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader)
+
+http://scripts.sil.org/OFL
+
+b0c618f6d8ea.ttf
+IBM Plex Mono
+Copyright 2017 IBM Corp. All rights reserved.
+
+http://scripts.sil.org/OFL
+
+0dfc29fde7d9.ttf
+Space Grotesk
+Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
+
+https://scripts.sil.org/OFL
+
+56632cca6632.ttf
+Space Grotesk Medium
+Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
+
+https://scripts.sil.org/OFL
+
+d6c65600eb01.ttf
+Newsreader
+Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader)
+
+http://scripts.sil.org/OFL
+
+1a6844598cfc.ttf
+IBM Plex Mono Medium
+Copyright 2017 IBM Corp. All rights reserved.
+
+http://scripts.sil.org/OFL
+
+a699af1dea30.ttf
+Inter
+Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+
+https://openfontlicense.org
+
+b6ee934451c4.ttf
+Sora SemiBold
+Copyright 2019 The Sora Project Authors (https://github.com/sora-xor/sora-font)
+
+https://scripts.sil.org/OFL
+
+c1e7453ea26a.ttf
+Instrument Serif
+Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+
+https://scripts.sil.org/OFL

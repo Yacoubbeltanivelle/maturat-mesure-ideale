@@ -1,0 +1,215 @@
+/* Socle v2 : surcharges transversales chargées après toutes les feuilles existantes. */
+
+#site :is(em, span, strong, b),
+#credits-dialog :is(em, span, strong, b) {
+  color: inherit !important;
+}
+
+#site *,
+#credits-dialog * {
+  font-style: normal !important;
+}
+
+#site em,
+#credits-dialog em {
+  font-family: 'Instrument Sans', sans-serif !important;
+  font-weight: inherit !important;
+}
+
+.desktop-guard {
+  display: none;
+}
+
+.demo-banner {
+  box-sizing: border-box;
+  min-height: 28px;
+  padding: 6px 24px;
+  color: #5d7182;
+  background: #edf3f7;
+  border-bottom: 1px solid #d9e3e9;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+body.admin-mode .demo-banner {
+  display: none;
+}
+
+/* Sur l'accueil, l'en-tête absolu de style.css partait du haut de la page et recouvrait ce bandeau : il part sous lui. */
+html body[data-page="home"] .site-header {
+  top: 28px;
+}
+
+/* style.css place .editorial-intro en absolu pour l'ancien hero : les pages v2 la remettent dans le flux, comme la FAQ. */
+.v2-editorial .editorial-intro {
+  position: static;
+  max-width: none;
+}
+
+.v2-editorial .editorial-intro-grid {
+  align-items: start;
+}
+
+/* main.js donne le focus au titre après un changement de page : un titre n'est pas un contrôle, pas de cadre. */
+main h1[tabindex="-1"]:focus {
+  outline: none;
+}
+
+/* style.css donne 7 % de marge à la page devis : elle s'aligne sur le logo (5,6 %) comme les autres pages. */
+body[data-page="quote"] .quote-page {
+  padding-inline: 5.6%;
+}
+
+/* Loupe du champ de recherche du catalogue. */
+.catalog-hero-search button svg {
+  display: block;
+  margin: auto;
+}
+
+/* Le gris des placeholders de style.css (#7a8793) restait à 3,7:1 sur blanc : celui-ci atteint 4,9:1. */
+[data-pack=E] input::placeholder,
+[data-pack=E] textarea::placeholder {
+  color: #66727e;
+}
+
+.v2-editorial .editorial-intro h1 {
+  max-width: 900px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: clamp(46px, 5vw, 74px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.v2-editorial h2,
+.v2-editorial h3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-style: normal;
+}
+
+.v2-legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.v2-legal-grid > div,
+.v2-copy {
+  max-width: 680px;
+}
+
+.v2-legal-grid h3,
+.v2-copy h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.v2-legal-grid h3:not(:first-child) {
+  margin-top: 30px;
+}
+
+.v2-legal-grid p,
+.v2-legal-grid address,
+.v2-copy p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 15px;
+  font-style: normal;
+  line-height: 1.75;
+}
+
+.v2-data-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.v2-data-list > div {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.8fr);
+  gap: 34px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.v2-data-list dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.v2-data-list dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.v2-rights-copy {
+  margin-top: 42px;
+}
+
+.v2-topic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.v2-topic-list li {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+}
+
+.v2-link-row {
+  gap: 36px;
+}
+
+/* Sous 1024 px, la maquette laisse la place au message. Mesuré le 30/10 : à 1024 px, aucune page ne déborde. */
+@media (max-width: 1023px) {
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: #f4f7f9;
+  }
+
+  body > :not(.desktop-guard):not(script) {
+    display: none !important;
+  }
+
+  .desktop-guard {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #263746;
+    font-family: 'Instrument Sans', sans-serif;
+    text-align: center;
+  }
+
+  .desktop-guard img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 28px;
+  }
+
+  .desktop-guard p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .desktop-guard p + p {
+    margin-top: 8px;
+    color: #687987;
+    font-size: 14px;
+  }
+}
